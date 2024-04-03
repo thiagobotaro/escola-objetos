@@ -4,7 +4,10 @@ const estudante = {
     cpf: '11772255331',
     turma: 'JavaScript'
 }
-// notação de ponto
-console.log(`O nome do(a) estudante é ${estudante.nome}`);
-console.log(`A idade do(a) estudante é ${estudante.idade}`);
-console.log(`Os três primeiros digitos do CPF são: ${estudante.cpf.substring(0, 3)}`);
+
+function exibeInfoEstudante(objEstudante, infoEstudante){
+    return objEstudante[infoEstudante];
+}
+
+console.log(exibeInfoEstudante(estudante, 'nome'));
+console.log(estudante['cpf']);
