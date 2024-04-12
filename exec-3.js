@@ -2,7 +2,7 @@ const pessoas = [
     {
     nome: 'Thiago',
     idade: 34,
-    cidade: 'São Paulo'
+    cidade: 'São José do Rio Preto'
     },
     {
         nome: 'Eduardo',
@@ -17,14 +17,20 @@ const pessoas = [
 ]
 
 function mostrarInfoPessoa(obj){
-    console.log(pessoas[obj]);
+    console.log('-----------Lista de Pessoas------------');
+    obj.forEach(pessoa => {
+        console.log(`Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Cidade: ${pessoa.cidade}`);
+    });
+    console.log('-----------------FIM--------------------');
 }
 
-function filtrarPorCidade(obj, city){
-    obj.filter((city) => city === this.cidade);
-}
+function filtrarPorCidade(lista, nomeCidade){
+    return lista.filter(lista => lista.cidade === nomeCidade);
+    };
 
 pessoas.push({nome: 'Helena', idade: 2, cidade: 'São Paulo'});
 
-// mostrarInfoPessoa(3);
-filtrarPorCidade(pessoas, 'São Paulo');
+mostrarInfoPessoa(pessoas);
+const pessoasSaoPaulo = filtrarPorCidade(pessoas, 'São Paulo');
+console.log(pessoasSaoPaulo);
+
